@@ -58,6 +58,8 @@ void setup() {
 	life = loadImage("img/life.png");
 	soldier = loadImage("img/soldier.png");
 	cabbage = loadImage("img/cabbage.png");
+  stone1 = loadImage("img/stone1.png");
+  stone2 = loadImage("img/stone2.png");
 
 	soilEmpty = loadImage("img/soils/soilEmpty.png");
 
@@ -231,6 +233,13 @@ void draw() {
 				image(soils[areaIndex][4], i * SOIL_SIZE, j * SOIL_SIZE);
         if(soilHealth[i][j] == 0){
           image(soilEmpty,i*SOIL_SIZE,j*SOIL_SIZE);
+        }
+        if(soilHealth[i][j] == 30){
+          image(stone1,i*SOIL_SIZE,j*SOIL_SIZE);
+        }
+        if(soilHealth[i][j] == 45){
+          image(stone1,i*SOIL_SIZE,j*SOIL_SIZE);
+          image(stone2,i*SOIL_SIZE,j*SOIL_SIZE);
         }
 				
 			}
